@@ -183,37 +183,88 @@ export function LoginPage() {
           </button>
         </form>
 
-        {/* Evaluation Demo Credentials Guide */}
-        <div style={{ marginTop: '1.5rem', paddingTop: '1.15rem', borderTop: '1px solid var(--border-subtle)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.35rem', color: 'var(--text-muted)', fontSize: '0.725rem', marginBottom: '0.5rem' }}>
-            <KeyRound size={12} />
-            <span style={{ fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.04em' }}>Demo Accounts</span>
+        {/* Demo Credentials Section */}
+        <div style={{ marginTop: '1.5rem', paddingTop: '1.15rem', borderTop: '1px solid var(--border-color)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', color: 'var(--text-secondary)', fontSize: '0.8rem', fontWeight: 600, marginBottom: '0.75rem' }}>
+            <KeyRound size={14} style={{ color: 'var(--primary)' }} />
+            <span>Demo Credentials</span>
           </div>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '0.35rem' }}>
-            <button
-              type="button"
-              className="btn btn-outline btn-sm"
-              style={{ fontSize: '0.725rem', padding: '0.2rem 0.35rem' }}
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+            {/* Admin */}
+            <div
               onClick={() => handleQuickFill('admin', 'admin123')}
+              style={{
+                padding: '0.55rem 0.75rem',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor: 'var(--bg-input)',
+                border: '1px solid var(--border-color)',
+                cursor: 'pointer',
+                transition: 'border-color 0.15s ease',
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--primary)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)'; }}
+              title="Click to fill Admin credentials"
             >
-              ADMIN
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline btn-sm"
-              style={{ fontSize: '0.725rem', padding: '0.2rem 0.35rem' }}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.2rem' }}>
+                <span style={{ fontSize: '0.775rem', fontWeight: 700, color: 'var(--text-primary)' }}>Admin</span>
+                <span className="badge badge-admin" style={{ fontSize: '0.65rem', padding: '0.1rem 0.35rem' }}>Full Access</span>
+              </div>
+              <div style={{ fontSize: '0.725rem', color: 'var(--text-secondary)', display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                <span>Username: <strong style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-mono)' }}>admin</strong></span>
+                <span>Password: <strong style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-mono)' }}>admin123</strong></span>
+              </div>
+            </div>
+
+            {/* Base Commander */}
+            <div
               onClick={() => handleQuickFill('commander1', 'commander123')}
+              style={{
+                padding: '0.55rem 0.75rem',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor: 'var(--bg-input)',
+                border: '1px solid var(--border-color)',
+                cursor: 'pointer',
+                transition: 'border-color 0.15s ease',
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--primary)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)'; }}
+              title="Click to fill Base Commander credentials"
             >
-              COMMANDER
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline btn-sm"
-              style={{ fontSize: '0.725rem', padding: '0.2rem 0.35rem' }}
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.2rem' }}>
+                <span style={{ fontSize: '0.775rem', fontWeight: 700, color: 'var(--text-primary)' }}>Base Commander</span>
+                <span className="badge badge-commander" style={{ fontSize: '0.65rem', padding: '0.1rem 0.35rem' }}>FOB Alpha</span>
+              </div>
+              <div style={{ fontSize: '0.725rem', color: 'var(--text-secondary)', display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                <span>Username: <strong style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-mono)' }}>commander1</strong></span>
+                <span>Password: <strong style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-mono)' }}>commander123</strong></span>
+              </div>
+            </div>
+
+            {/* Logistics Officer */}
+            <div
               onClick={() => handleQuickFill('logistics1', 'logistics123')}
+              style={{
+                padding: '0.55rem 0.75rem',
+                borderRadius: 'var(--radius-md)',
+                backgroundColor: 'var(--bg-input)',
+                border: '1px solid var(--border-color)',
+                cursor: 'pointer',
+                transition: 'border-color 0.15s ease',
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = 'var(--primary)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = 'var(--border-color)'; }}
+              title="Click to fill Logistics Officer credentials"
             >
-              LOGISTICS
-            </button>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.2rem' }}>
+                <span style={{ fontSize: '0.775rem', fontWeight: 700, color: 'var(--text-primary)' }}>Logistics Officer</span>
+                <span className="badge badge-logistics" style={{ fontSize: '0.65rem', padding: '0.1rem 0.35rem' }}>FOB Alpha</span>
+              </div>
+              <div style={{ fontSize: '0.725rem', color: 'var(--text-secondary)', display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
+                <span>Username: <strong style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-mono)' }}>logistics1</strong></span>
+                <span>Password: <strong style={{ color: 'var(--text-primary)', fontFamily: 'var(--font-mono)' }}>logistics123</strong></span>
+              </div>
+            </div>
           </div>
         </div>
 
